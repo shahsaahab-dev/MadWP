@@ -8,6 +8,8 @@
  */
 
 ?>
+<div class="container">
+<div class="row">
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -52,3 +54,5 @@
 
 
 		</div><!-- #post-<?php the_ID(); ?> -->
+</div>
+</div>

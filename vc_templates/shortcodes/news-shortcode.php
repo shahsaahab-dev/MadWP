@@ -11,6 +11,7 @@ function news_func($atts, $content = null){
 
     ob_start();
     ?>
+    <div class="row">
         <?php
         $args = array(
             'post_type' => 'latest_news',
@@ -32,7 +33,7 @@ function news_func($atts, $content = null){
             </div>
             </div>
         <?php endwhile; wp_reset_postdata(); endif; ?>
-                
+                </div>
                
 
     <?php
@@ -45,7 +46,7 @@ function news_func($atts, $content = null){
 //Latest News
 if(function_exists('vc_map')){
     vc_map( array(
-        "name" => esc_html__("Testimonials", 'moneyadvisor'),
+        "name" => esc_html__("News", 'moneyadvisor'),
         "base" => "news",
         "class" => "",
         "icon" => "icon-st",
