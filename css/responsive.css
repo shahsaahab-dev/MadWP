@@ -42,8 +42,18 @@ body {
 
     
     h3.main-section-title {
-    font-size: 52px;
-    margin-top: 0px;
+    font-size: 38px!important;
+    margin-top: 35px;
+}
+
+p.main-sec-text {
+    font-size: 26px;
+    font-weight: 600;
+    padding-right: 0px;
+}
+
+p.excellent-text{
+    font-size:20px;
 }
 
 .test-box {margin-bottom: 30px;}
@@ -98,7 +108,7 @@ body {
     
     .form-wrapper {
     margin-left: 0px;
-    width: 95%;
+    width: 100%;
 }
     
     .debt-free-section img.rocket {
