@@ -164,3 +164,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 require MAD_THEMEROOT . '/inc/enqueue.php';
+require MAD_THEMEROOT . '/vc_templates/vc_init.php';

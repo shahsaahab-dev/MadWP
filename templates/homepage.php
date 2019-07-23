@@ -4,8 +4,8 @@
 get_header('home');
 ?>
 <div class="wrapper">
-    <div class="container">
-        <div class="row">
+<div class="container">
+
         <?php
 		while ( have_posts() ) :
 			the_post();
@@ -16,8 +16,8 @@ get_header('home');
 		?>
 
         </div>
-    </div>
-</div>
+        </div>
+
 
 
 
