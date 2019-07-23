@@ -87,4 +87,45 @@ function section_text() {
 }
 
 // End Money Advisor Section Text
+
+add_shortcode( 'sec_btn', 'sec_btn_func' );
+function sec_btn_func( $atts ) {
+ extract( shortcode_atts( array(
+  'btn_text' => 'Get Debt Help!',
+  'btn_url' => 'http://www.google.com'
+ ), $atts ) );
+ return "<button href='{$btn_url}' class='btn btn-primary btn-main-section'>{$btn_text}</button>";
+}
+
+
+add_action( 'vc_before_init', 'section_btn' );
+function section_btn() {
+ vc_map( array(
+  "name" => __( "Money Advisor Button", "moneyadvisor_theme" ),
+  "base" => "sec_btn",
+  "class" => "",
+  "category" => __( "Money Advisor", "moneyadvisor_theme"),
+  "params" => array(
+ array(
+  "type" => "textfield",
+  "holder" => "div",
+  "class" => "",
+  "heading" => __( "Button", "moneyadvisor_theme" ),
+  "param_name" => "btn_text",
+  "value" => __( "Default param value", "moneyadvisor_theme" ),
+  "description" => __( "Description for Text param.", "moneyadvisor_theme" )
+ ),
+ array(
+  "type" => "textfield",
+  "class" => "",
+  "heading" => __( "Link", "moneyadvisor_theme" ),
+  "param_name" => "btn_url",
+  "value" => '#666666', //Default  color
+  "description" => __( "Choose text color", "moneyadvisor_theme" )
+ )
+  )
+ ) );
+}
+// Money Advisor Button 
+
 ?>

@@ -32,6 +32,22 @@ body {
     ul.navigation{
         display: none;
     }
+
+    body {
+        background-image: none!important;
+    }
+nav.menu-menu-1-container ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-size: 18px;
+  }
+  
+  nav.menu-menu-1-container ul li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #d9d9d9;
+    display: block;
+  }
 }
 @media only screen and (min-width:320px) and (max-width:500px){
     
@@ -44,6 +60,17 @@ body {
     h3.main-section-title {
     font-size: 38px!important;
     margin-top: 35px;
+}
+
+.debt-free-section::before {
+    height:70%;
+}
+
+
+button.btn.btn-primary.btn-main-section {
+    margin-left: 0px;
+    margin-top: 0px!important;
+    margin-bottom: 17px;
 }
 
 p.main-sec-text {
@@ -81,11 +108,16 @@ p.excellent-text{
     
     .footer {
     background-size: cover;
+    height:512px;
 }
     
     .site-desc p {
     position: absolute;
     bottom: -185%;
+}
+
+.test-box {
+    margin-bottom: 25px;
 }
 
 .site-desc {
@@ -163,6 +195,33 @@ p.excellent-text{
 
     h3.section-title{
         font-size:28px;
+    }
+
+    nav.menu ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        font-size: 18px;
+      }
+      
+      nav.menu ul li {
+        padding: 10px 0px;
+        border-bottom: 1px solid #d9d9d9;
+        display: block;
+      }
+
+      .example-img img {
+        max-width: 111%;
+        margin-left: -37px;
+    }
+
+    .repayment-img p {
+        margin-left: 0!important;
+    }
+
+    .repayment-img img {
+        max-width: 340px;
+        min-width: 340px;
     }
 }
 

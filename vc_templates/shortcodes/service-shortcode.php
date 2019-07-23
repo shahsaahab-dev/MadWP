@@ -14,9 +14,12 @@ function servicebox_func($atts, $content = null){
     $img    = wp_get_attachment_image_url($photo,'full');
     $url    = vc_build_link( $link );
     ob_start(); ?>
-
+    <div class="container">
+        <div class="row">
+ 
 
     <!-- Actual Element Here -->
+    <div class="col-lg-4">
         <div class="help-you-box">
         <div class="image-holder" style="background-image:url(<?php echo $img ?>);"></div>
         <div class="box-content">
@@ -35,7 +38,10 @@ function servicebox_func($atts, $content = null){
                 Read More <i class="fa fa-long-arrow-right"></i>
             </button>
         </div>
-
+</div>
+           
+        </div>
+    </div>
     <!-- Actual Element End Here  -->
     <?php
     return ob_get_clean();
