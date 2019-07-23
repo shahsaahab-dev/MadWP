@@ -4,10 +4,11 @@ add_shortcode( 'sec_title', 'sec_title_func' );
 function sec_title_func( $atts ) {
  extract( shortcode_atts( array(
   'title' => 'Title Here',
-  'color' => '#333e5e'
+  'color' => '#333e5e',
+  'text_align' => 'center'
  ), $atts ) );
   
- return "<h3 class='section-title' style='color:{$color};'>{$title}</h3>";
+ return "<h3 class='section-title' style='color:{$color}; text-align:{$text_align};'>{$title}</h3>";
 }
 
 add_action( 'vc_before_init', 'section_title' );
@@ -48,11 +49,12 @@ function section_title() {
 add_shortcode( 'sec_text', 'sec_text_func' );
 function sec_text_func( $atts ) {
  extract( shortcode_atts( array(
-  'text' => 'Text Here',
-  'color' => '#666666'
+  'text' => 'Enter Text Here',
+  'color' => '#666666',
+  'text_align' => 'center'
  ), $atts ) );
   
- return "<p class='section-text' style='color:{$color};'>{$text}</p>";
+ return "<p class='section-text' style='color:{$color}; text-align:{$text_align};'>{$text}</p>";
 }
 
 add_action( 'vc_before_init', 'section_text' );
@@ -68,7 +70,7 @@ function section_text() {
   "holder" => "div",
   "class" => "",
   "heading" => __( "Section Text", "moneyadvisor_theme" ),
-  "param_name" => "title",
+  "param_name" => "text",
   "value" => __( "Default param value", "moneyadvisor_theme" ),
   "description" => __( "Description for Text param.", "moneyadvisor_theme" )
  ),

@@ -38,11 +38,15 @@ body {
     body {
     background-image: none!important;
 }
+
+
     
     h3.main-section-title {
     font-size: 52px;
     margin-top: 0px;
 }
+
+.test-box {margin-bottom: 30px;}
     button.btn.btn-primary.btn-main-section {
     display: block;
     margin-top: 30px;
@@ -145,6 +149,10 @@ body {
 
     .header-section{
         background-image: none!important;
+    }
+
+    h3.section-title{
+        font-size:28px;
     }
 }
 

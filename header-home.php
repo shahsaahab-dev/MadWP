@@ -38,9 +38,8 @@
 
                     <!-- Main Menu One Start -->
                     <div class="col-auto d-none d-lg-block position-static">
-                        <div class="main-menu">
-                            <nav>
-                                <ul>
+<div class="main-menu">
+                                <!-- <ul>
                                     <li class="menu-item-has-children"><a href="index.html">Debt Plans</a>
                                         
                                     </li>
@@ -50,9 +49,14 @@
                                     <li class="menu-item-has-children"><a href="blog-right-sidebar.html">Contact</a>
                                         
                                     </li>
-                                </ul>
-                            </nav>
-                        </div>
+                                </ul> -->
+                                <?php 
+                                wp_nav_menu( array(
+                                    'theme_location' => 'primary',
+                                    'container' => 'nav'
+                                ));
+                                ?>
+                    </div><!-- Main Menu One End -->
                     </div><!-- Main Menu One End -->
 
                     <!-- User & Cart & Mobile Menu Button Start -->
@@ -75,17 +79,12 @@
 
                 <div class="offcanvas-inner-content">
                     <nav class="offcanvas-navigation">
-                        <ul>
-                            <li class="menu-item-has-children"><a href="index.html">Debt Plans</a>
-                                
-                            </li>
-                            <li class="menu-item-has-children"><a href="about-us.html">News</a>
-
-                            </li>
-                            
-                            
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                    <?php 
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'container' => 'nav'
+                    ));
+                    ?>
                     </nav>
                 </div>
             </div>

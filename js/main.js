@@ -93,10 +93,6 @@ $('.testimonials').owlCarousel({
             items:4,
             nav:true,
             loop:true
-        },
-        1024:{
-            items:3,
-            nav:false
         }
     }
 });

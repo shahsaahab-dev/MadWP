@@ -24,6 +24,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<style>
+    .debt-free-section{
+ background-image: url(<?php echo MAD_THEMEROOT_URI . '/'?>images/debt-free.png);
+    }
+    </style>
     <!-- Navbar Area -->
     <div class="header-section section header-sticky header-transparent" style="background-image:url(<?php echo MAD_THEMEROOT_URI . '/'?>images/other-page-header.png);">
             <div class="container">
@@ -40,7 +46,7 @@
                     <div class="col-auto d-none d-lg-block position-static">
                         <div class="main-menu">
                             <nav>
-                                <ul>
+                                <!-- <ul>
                                     <li class="menu-item-has-children"><a href="index.html">Debt Plans</a>
                                         
                                     </li>
@@ -50,7 +56,12 @@
                                     <li class="menu-item-has-children"><a href="blog-right-sidebar.html">Contact</a>
                                         
                                     </li>
-                                </ul>
+                                </ul> -->
+                                <?php 
+                                wp_nav_menu( array(
+                                    'theme_location' => 'primary'
+                                ));
+                                ?>
                             </nav>
                         </div>
                     </div><!-- Main Menu One End -->
