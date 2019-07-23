@@ -63,7 +63,7 @@ nav.menu-menu-1-container ul {
 }
 
 .debt-free-section::before {
-    height:70%;
+    height:88%;
 }
 
 
@@ -239,5 +239,11 @@ p.excellent-text{
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .debt-free-section h3.section-title {
+        margin-top: 85px!important;
+    }
+
+    
 }
 
