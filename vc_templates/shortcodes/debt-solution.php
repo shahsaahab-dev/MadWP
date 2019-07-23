@@ -35,6 +35,7 @@ function debt_sols_func($atts, $content = null){
         </div>
         <?php endwhile; wp_reset_postdata(); endif; ?>
 
+    </div>
 
     <?php
     return ob_get_clean();

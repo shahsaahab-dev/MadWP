@@ -83,7 +83,7 @@ header ul.navigation li a{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  height: 12vh;
+  height: 18vh;
 }
 
 .header-section.header-transparent ~ .page-banner-section {
@@ -1522,4 +1522,9 @@ h3.para-title {
 button.btn.btn-primary.btn-main-section {
   margin-left: -25px;
   margin-top: -18px;
+}
+
+
+.page h3.section-title {
+  margin-top: 25px;
 }

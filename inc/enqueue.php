@@ -13,6 +13,7 @@ function custom_style_scripts(){
     wp_enqueue_style('owlcarousel',MAD_THEMEROOT_URI . '/css/owl.carousel.min.css',array(),'1.0','all');
     wp_enqueue_style('owl-theme',MAD_THEMEROOT_URI . '/css/owl.theme.default.min.css',array(),'1.0','all');
     wp_enqueue_style('font-awesome',MAD_THEMEROOT_URI . '/css/font-awesome.min.css',array(),'1.0','all');
+    wp_enqueue_style('themestyle',get_stylesheet_uri());
     wp_enqueue_style('style',MAD_THEMEROOT_URI . '/css/style.css',array(),'1.0','all');
     wp_enqueue_style('responsive',MAD_THEMEROOT_URI . '/css/responsive.css',array(),'1.0','all');
 

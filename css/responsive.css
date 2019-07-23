@@ -223,5 +223,21 @@ p.excellent-text{
         max-width: 340px;
         min-width: 340px;
     }
+
+    .debt-card {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .entry-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    header.entry-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 

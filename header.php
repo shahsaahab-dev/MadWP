@@ -58,10 +58,11 @@
                                     </li>
                                 </ul> -->
                                 <?php 
-                                wp_nav_menu( array(
-                                    'theme_location' => 'primary'
-                                ));
-                                ?>
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'container' => 'nav'
+                    ));
+                    ?>
                             </nav>
                         </div>
                     </div><!-- Main Menu One End -->
