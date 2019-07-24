@@ -32,7 +32,7 @@
                     <!-- Header Logo Start -->
                     <div class="col-auto mr-auto">
                         <div class="header-logo">
-                            <a href="index.html"><img src="<?php echo MAD_THEMEROOT_URI . '/'?>images/logo.png" alt="moneyadvisor"></a>
+                            <a href="<?php echo esc_url(bloginfo('url')); ?>"><img src="<?php echo MAD_THEMEROOT_URI . '/'?>images/logo.png" alt="moneyadvisor"></a>
                         </div>
                     </div><!-- Header Logo End -->
 
