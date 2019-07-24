@@ -247,6 +247,10 @@ p.excellent-text{
     .debt-card {
         width: 100%;
     }
+
+    .debt-free-section {
+        padding: 100px 0px 100px 0px;
+    }
     
 }
 
