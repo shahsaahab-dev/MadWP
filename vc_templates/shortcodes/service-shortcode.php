@@ -1,112 +1,64 @@
 <?php 
 
 
-add_shortcode('servicebox', 'servicebox_func');
-function servicebox_func($atts, $content = null){
+// Lastest News
+add_shortcode('services','services_func');
+function services_func($atts, $content = null){
     extract(shortcode_atts(array(
-        'photo'       =>  '',
-        'title'       =>  '',
-        'link'        =>  '',
-        'linkimg'     =>  '',
-        'linktitle'   =>  '',
-        'iclass'      =>  '',
+        'show'		=>	'-1',
+        'num'       =>  '-1',
     ), $atts));
-    $img    = wp_get_attachment_image_url($photo,'full');
-    $url    = vc_build_link( $link );
-    ob_start(); ?>
-    <div class="container">
-        <div class="row">
- 
 
-    <!-- Actual Element Here -->
-    <div class="col-lg-4">
+    ob_start();
+    ?>
+    <div class="col-lg-11 mx-auto">
+     <div class="card-owl owl-carousel">
+        <?php
+        $args = array(
+            'post_type' => 'service',
+            'posts_per_page' => $num,
+        );
+        $service = new WP_Query($args);
+        if($service->have_posts()) : while($service->have_posts()) : $service->the_post();
+        $format = get_post_format();
+            ?>
+
         <div class="help-you-box">
-        <div class="image-holder" style="background-image:url(<?php echo $img ?>);"></div>
-        <div class="box-content">
-            <h3>PayDay Loans</h3>
-            <hr>
-            <p>Mr & Mrs Swan*</p>
-            <ul>
-                <li>-£6,000 Egg Card </li>
-                <li>-£2,000 Halifax Card </li>
-                <li>-£4500 M&S Store Card </li>
-
-            </ul>
-            
+            <div class="image-holder" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);"></div>
+            <div class="box-content">
+                <h3><?php the_title(); ?></h3>
+                <hr>
+                <p><?php echo get_post_meta(get_the_ID(),'subtitle_service',true); ?></p>
+                <ul>
+                    <?php echo the_content(); ?>
+                </ul>
+                
+            </div>
+            <button class="read-more" href="<?php the_permalink(); ?>">
+                    Read More <i class="fa fa-long-arrow-right"></i>
+                </button>
         </div>
-        <button class="read-more">
-                Read More <i class="fa fa-long-arrow-right"></i>
-            </button>
-        </div>
-</div>
-           
-        </div>
+             
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+                
     </div>
-    <!-- Actual Element End Here  -->
+    </div>
+
     <?php
     return ob_get_clean();
 }
 
-// Service Box
+
+
+// VC Build
+//Latest News
 if(function_exists('vc_map')){
     vc_map( array(
-        "name" => esc_html__("MoneyAdviser Service Box", 'moneyadvisor'),
-        "base" => "servicebox",
+        "name" => esc_html__("Services", 'moneyadvisor'),
+        "base" => "services",
         "class" => "",
+        "icon" => "icon-st",
         "category" => 'Moneyadvisor',
-        "params" => array(
-            array(
-                "type" => "attach_image",
-                "holder" => "div",
-                "class" => "",
-                "heading" => esc_html__("Image", 'moneyadvisor'),
-                "param_name" => "photo",
-            ),
-            array(
-                "type" => "textfield",
-                "holder" => "div",
-                "class" => "",
-                "heading" => esc_html__("Title", 'moneyadvisor'),
-                "param_name" => "title",
-            ),
-            array(
-                "type" => "textarea_html",
-                "holder" => "div",
-                "class" => "",
-                "heading" => esc_html__("Content", 'moneyadvisor'),
-                "param_name" => "content",
-                "value" => "",
-            ),
-            array(
-                'type' => 'vc_link',
-                "heading" => esc_html__("Button", 'moneyadvisor'),
-                "param_name" => "link",
-            ),
-            array(
-                "type" => "checkbox",
-                "holder" => "div",
-                "edit_field_class" => "vc_col-sm-6",
-                "class" => "",
-                "heading" => esc_html__("Link in Image", 'moneyadvisor'),
-                "param_name" => "linkimg",
-            ),
-            array(
-                "type" => "checkbox",
-                "holder" => "div",
-                "edit_field_class" => "vc_col-sm-6",
-                "class" => "",
-                "heading" => esc_html__("Link in Title", 'moneyadvisor'),
-                "param_name" => "linktitle",
-            ),
-            array(
-                "type" => "textfield",
-                "holder" => "div",
-                "class" => "",
-                "heading" => esc_html__("Extra Class", 'moneyadvisor'),
-                "param_name" => "iclass",
-            ),
-        )));
+        ));
 }
-
-
 ?>

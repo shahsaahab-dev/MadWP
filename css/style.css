@@ -1327,7 +1327,7 @@ button.owl-next i.fa:hover {
     list-style: none;
     font-size: 14px;
     padding: 0;
-    padding-left: 25px;
+    padding-left: 13px;
 }
 
 .footer ul.links li a {
@@ -1340,7 +1340,7 @@ button.owl-next i.fa:hover {
 }
 
 ul.links h4 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 800;
     color: #fff;
     text-transform: uppercase;
@@ -1373,7 +1373,7 @@ ul.contact-info li {
 .debt-free-col p {
     font-size: 18px;
     color: #666666;
-    padding: 0px 45px;
+    padding: 0px 160px;
 }
 
 .debt-free-section {
@@ -1529,3 +1529,4 @@ button.btn.btn-primary.btn-main-section {
 .page h3.section-title {
   margin-top: 25px;
 }
+
